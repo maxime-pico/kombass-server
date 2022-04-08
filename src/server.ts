@@ -7,7 +7,18 @@
 import "reflect-metadata";
 import app from "./app";
 var debug = require("debug")("server:server");
-import * as http from "http";
+import fs from "fs";
+// import * as http from "http";
+import * as https from "https";
+var privateKey = fs.readFileSync(
+  __dirname + "/../certs/selfsigned.key",
+  "utf8"
+);
+var certificate = fs.readFileSync(
+  __dirname + "/../certs/selfsigned.crt",
+  "utf8"
+);
+var credentials = { key: privateKey, cert: certificate };
 import socketServer from "./socket";
 
 /**
@@ -21,8 +32,8 @@ app.set("port", port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
-
+// var server = http.createServer(app);
+var server = https.createServer(credentials, app);
 /**
  * Listen on provided port, on all network interfaces.
  */
