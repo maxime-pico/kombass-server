@@ -7,7 +7,7 @@
 import "reflect-metadata";
 import app from "./app";
 var debug = require("debug")("server:server");
-import fs from "fs";
+import * as fs from "fs";
 // import * as http from "http";
 import * as https from "https";
 var privateKey = fs.readFileSync(
