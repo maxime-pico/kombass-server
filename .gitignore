@@ -1,2 +1,4 @@
 dist/
-.vscode/
+.vscode
+.vscode/symbols.json
+.vscode/settings.json
