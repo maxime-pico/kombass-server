@@ -45,12 +45,11 @@ export class GameController {
   public async updateGame(
     @SocketIO() io: Server,
     @ConnectedSocket() socket: Socket,
-    @MessageBody() opponentsUnits: any
+    @MessageBody() update: any
   ) {
     console.log("moves_sent");
-    console.log(opponentsUnits);
     const gameRoom = this.getSocketGameRoom(socket);
-    socket.to(gameRoom).emit("moves_received", opponentsUnits);
+    socket.to(gameRoom).emit("moves_received", update);
   }
 
   @OnMessage("next_round")
