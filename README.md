@@ -1,12 +1,12 @@
 # Welcome to Kombass
 
-This is the server-side repo of a game that is currently running at: [kombass.herokuapp.com](https://kombass.herokuapp.com)
-The server is currently running at: [kombass-server.herokuapp.com](htttps://kombass-server.herokuapp.com)
+This is the server-side repo of a game that is currently running at: [kombass.herokuapp.com](https://kombass.herokuapp.com) \
+The server is currently running at: [kombass-server.herokuapp.com](https://kombass-server.herokuapp.com) \
 The frontend repo is at: [Kombass](https://github.com/maxime-pico/kombass)
 
 ## ROADMAP
 
-Refer to [roadmap here](https://github.com/maxime-pico/kombass#roadmap).
+Refer to the [roadmap here](https://github.com/maxime-pico/kombass#roadmap).
 
 ## STACK
 
